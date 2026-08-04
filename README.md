@@ -1,69 +1,38 @@
-# Yousef Sabbagh Portfolio
+# Yousef Sabbagh — Full-Stack Developer Portfolio
 
-A clean and responsive personal portfolio for Yousef Sabbagh, a frontend developer focused on React, TypeScript, responsive design, and practical web applications.
+A responsive engineering portfolio presenting full-stack projects across frontend, backend, APIs, authentication, authorization, relational databases, offline-first storage, and end-to-end product workflows.
 
-## Overview
+## Project order
 
-This portfolio presents my frontend work, skills, services, and selected projects in a simple single-page website. It is built to be easy to maintain, fast to load, and ready to connect with a custom domain.
+1. **TeamFlow** — Full-stack project and task management platform built with React, Laravel, MariaDB, and Laravel Sanctum.
+2. **Mawad** — B2B construction procurement platform with contractor/supplier workflows and AI-powered product features.
+3. **Teacher Organizer** — Offline-first teacher management PWA built with React, TypeScript, IndexedDB, and Dexie.
+4. **Sportivo** — Multi-page sports e-commerce experience built with HTML, CSS, and JavaScript.
 
-## Featured Projects
-
-- **Teacher Organizer** — Offline-first PWA for teachers with IndexedDB, Dexie, backup, and restore features.
-- **Sportivo** — Sports e-commerce frontend built with HTML, CSS, and Vanilla JavaScript.
-- **TopBid** — Auction platform frontend currently in development with React, TypeScript, Tailwind CSS, and REST API integration.
-
-## Tech Stack
+## Portfolio stack
 
 - React
 - TypeScript
-- Vite
 - Tailwind CSS
-- HTML5
-- CSS3
+- Vite
 
-## Getting Started
-
-Install dependencies:
+## Local development
 
 ```bash
 npm install
-```
-
-Run the development server:
-
-```bash
 npm run dev
 ```
 
-Build the project for production:
+Production build:
 
 ```bash
 npm run build
 ```
 
-Run linting:
+Linting:
 
 ```bash
 npm run lint
-```
-
-Preview the production build locally:
-
-```bash
-npm run preview
-```
-
-## Project Structure
-
-```text
-src/
-  assets/
-    projects/
-  App.tsx
-  index.css
-  main.tsx
-public/
-  favicon.svg
 ```
 
 ## Contact
@@ -71,4 +40,3 @@ public/
 - GitHub: https://github.com/yousefitesabbagh-ITE77
 - LinkedIn: https://www.linkedin.com/in/yousef-sabbagh-a97ba1363
 - Email: yousef.ite.sabbagh@gmail.com
-- Phone: +963 984 454 517
