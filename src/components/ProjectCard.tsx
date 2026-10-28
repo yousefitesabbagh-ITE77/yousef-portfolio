@@ -1,15 +1,17 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView, useMotionValue, useReducedMotion, useScroll, useSpring, useTransform } from "motion/react";
 import Icon from "./Icon";
+import CountUp from "./CountUp";
 import useDesktopMotion from "../hooks/useDesktopMotion";
 import type { Project } from "../types";
 
 function ProjectActions({ project }: { project: Project }) {
   return (
     <div className="flex flex-wrap gap-2">
-      {project.liveDemo && <a href={project.liveDemo} target="_blank" rel="noreferrer" className="button-primary">Live demo <Icon name="external" className="h-3.5 w-3.5" /></a>}
-      {project.github && <a href={project.github} target="_blank" rel="noreferrer" className="button-secondary"><Icon name="github" className="h-3.5 w-3.5" />View code</a>}
-      {project.videoDemo && <a href={project.videoDemo} target="_blank" rel="noreferrer" className="button-quiet">Video demo <Icon name="external" className="h-3.5 w-3.5" /></a>}
+      {project.links?.map((link, index) => <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer" className={index === 0 ? "button-primary" : "button-secondary"}>{link.label}<Icon name="external" className="h-3.5 w-3.5" /></a>)}
+      {project.liveDemo && <a href={project.liveDemo} target="_blank" rel="noopener noreferrer" className="button-primary">Live demo <Icon name="external" className="h-3.5 w-3.5" /></a>}
+      {project.github && <a href={project.github} target="_blank" rel="noopener noreferrer" className="button-secondary"><Icon name="github" className="h-3.5 w-3.5" />View code</a>}
+      {project.videoDemo && <a href={project.videoDemo} target="_blank" rel="noopener noreferrer" className="button-quiet">Video demo <Icon name="external" className="h-3.5 w-3.5" /></a>}
     </div>
   );
 }
@@ -30,7 +32,7 @@ function ProjectVisual({ project, onOpenGallery }: { project: Project; onOpenGal
   const parallax = useTransform(scrollYProgress, [0,1], [-10,10]);
   const galleryLength = project.gallery?.length ?? 1;
   const images = project.gallery ?? (project.image ? [project.image] : []);
-  const address = project.liveDemo ? new URL(project.liveDemo).hostname : `Local preview / ${project.title.toLowerCase().replaceAll(" ", "-")}`;
+  const address = project.browserUrl ?? (project.liveDemo ? new URL(project.liveDemo).hostname : `Local preview / ${project.title.toLowerCase().replaceAll(" ", "-")}`);
 
   useEffect(() => {
     if (galleryLength < 2 || !inView || reduced) return;
@@ -76,18 +78,21 @@ function ProjectVisual({ project, onOpenGallery }: { project: Project; onOpenGal
 
 export default function ProjectCard({ project, index, onOpenGallery }: { project: Project; index: number; onOpenGallery: (images: string[], title: string) => void }) {
   return (
-    <article className="featured-project">
+    <article className={`featured-project${project.flagship ? " project-flagship" : ""}`}>
       <div className={`project-layout ${index % 2 === 1 ? "reverse" : ""}`}>
         <div className="project-visual"><ProjectVisual project={project} onOpenGallery={onOpenGallery} /></div>
         <div className="project-copy">
           <div className="project-meta"><span className="project-number">0{index + 1}</span><span className="project-eyebrow">{project.eyebrow}</span>{project.status && <span className="status-pill">{project.status}</span>}</div>
           <h3 className="project-title">{project.title}</h3>
+          {project.badges && <div className="project-badges">{project.badges.map((badge) => <span key={badge.label} className={`status-pill${badge.highlighted ? " project-badge-highlight" : ""}`}>{badge.label}</span>)}</div>}
           <p className="project-summary">{project.summary}</p>
           <ul className="project-points">{project.points.map((point) => <li key={point}><span>{point}</span></li>)}</ul>
+          {project.stat && <div className="project-test-stat"><CountUp value={project.stat} /></div>}
           <div className="mt-5 flex flex-wrap gap-1.5">{project.tech.map((tech) => <span key={tech} className="tech-pill">{tech}</span>)}</div>
           <div className="mt-6"><ProjectActions project={project} /></div>
         </div>
       </div>
+      {project.note && <p className="project-note">{project.note}</p>}
     </article>
   );
 }

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { featuredProjects } from "../data/projects";
 import ProjectCard from "./ProjectCard";
 import GalleryModal from "./GalleryModal";
@@ -25,9 +25,13 @@ export default function Projects() {
           </p>
         </div>
 
-        <div className="mt-14 space-y-9">
+        <p className="project-journey-intro">From an internship MVP to a startup-competition finalist.</p>
+        <div className="project-list">
           {featuredProjects.map((project, index) => (
-            <ProjectCard key={project.title} project={project} index={index} onOpenGallery={openGallery} />
+            <Fragment key={project.title}>
+              {index === 1 && <div className="project-evolution"><span className="project-evolution-line" aria-hidden="true" /><span>Evolved after customer discovery</span></div>}
+              <ProjectCard project={project} index={index} onOpenGallery={openGallery} />
+            </Fragment>
           ))}
         </div>
       </section>

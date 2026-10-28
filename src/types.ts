@@ -10,6 +10,12 @@ export type Project = {
   image?: string;
   gallery?: string[];
   status?: string;
+  flagship?: boolean;
+  badges?: { label: string; highlighted?: boolean }[];
+  links?: { label: string; href: string }[];
+  browserUrl?: string;
+  note?: string;
+  stat?: string;
 };
 
 export type SkillGroup = {
