@@ -1,0 +1,1 @@
+- [Portfolio scope](portfolio-scope.md) — Netlify-hosted static frontend; no backend, database, authentication, or Replit deployment.

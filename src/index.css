@@ -279,6 +279,62 @@ a:focus-visible {
   padding: clamp(1.75rem, 5vw, 4rem);
 }
 
+/* Let grid children shrink to the viewport rather than their longest word. */
+.grid > * {
+  min-width: 0;
+}
+
+#home h1,
+.section-title,
+#contact h2 {
+  overflow-wrap: anywhere;
+}
+
+.whatsapp-dock {
+  position: fixed;
+  right: max(1rem, env(safe-area-inset-right));
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  z-index: 40;
+}
+
+.whatsapp-button {
+  display: flex;
+  width: 3.25rem;
+  height: 3.25rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: white;
+  background: #128c4e;
+  border: 1px solid #ffffff33;
+  box-shadow: 0 8px 24px #0006;
+}
+
+@media (max-width: 639px) {
+  #home h1 {
+    font-size: clamp(2.25rem, 10vw, 3rem);
+  }
+
+  /* Reserve a fixed bottom strip, so the chat control cannot cover content. */
+  main {
+    padding-bottom: calc(4.5rem + env(safe-area-inset-bottom));
+  }
+
+  .whatsapp-dock {
+    inset: auto 0 0;
+    height: calc(4.5rem + env(safe-area-inset-bottom));
+    padding: 0.625rem max(1rem, env(safe-area-inset-right)) calc(0.625rem + env(safe-area-inset-bottom));
+    display: flex;
+    justify-content: flex-end;
+    background: #07101f;
+    border-top: 1px solid #ffffff14;
+  }
+
+  html {
+    scroll-padding-bottom: calc(5rem + env(safe-area-inset-bottom));
+  }
+}
+
 @media (min-width: 768px) {
   .section-heading {
     grid-template-columns: 1.1fr 0.9fr;
