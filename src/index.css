@@ -252,6 +252,7 @@ button:focus-visible,a:focus-visible,[tabindex]:focus-visible { outline:2px soli
   .screenshot-stage { height:clamp(215px,50vw,350px); }
   .expertise-grid { grid-template-columns:1fr; }
   .expertise-card,.expertise-card:first-child,.expertise-card:last-child { grid-column:auto; padding:26px; }
+  .expertise-grid > .expertise-card { grid-column:1 / -1; }
   .experience-card { padding:24px; }
   .contact-panel { padding:32px 24px; }
   .gallery-backdrop { padding:70px 14px; }
