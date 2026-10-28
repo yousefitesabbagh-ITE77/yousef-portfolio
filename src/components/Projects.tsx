@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { featuredProjects } from "../data/projects";
 import ProjectCard from "./ProjectCard";
 import GalleryModal from "./GalleryModal";
@@ -6,36 +6,6 @@ import type { Gallery } from "../types";
 
 export default function Projects() {
   const [gallery, setGallery] = useState<Gallery | null>(null);
-
-  useEffect(() => {
-    if (!gallery) return;
-    const handleKey = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setGallery(null);
-      if (event.key === "ArrowRight") {
-        setGallery((current) =>
-          current
-            ? { ...current, index: (current.index + 1) % current.images.length }
-            : current,
-        );
-      }
-      if (event.key === "ArrowLeft") {
-        setGallery((current) =>
-          current
-            ? {
-                ...current,
-                index: (current.index - 1 + current.images.length) % current.images.length,
-              }
-            : current,
-        );
-      }
-    };
-    document.body.style.overflow = "hidden";
-    window.addEventListener("keydown", handleKey);
-    return () => {
-      document.body.style.overflow = "";
-      window.removeEventListener("keydown", handleKey);
-    };
-  }, [gallery]);
 
   const openGallery = (images: string[], title: string) => {
     setGallery({ images, title, index: 0 });

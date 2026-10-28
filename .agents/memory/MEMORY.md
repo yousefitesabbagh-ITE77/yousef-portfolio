@@ -1,1 +1,2 @@
 - [Portfolio scope](portfolio-scope.md) — Netlify-hosted static frontend; no backend, database, authentication, or Replit deployment.
+- [Motion integration](motion-integration.md) — Lenis shares CSS anchor offsets; swipe tests need complete browser-like touch events.

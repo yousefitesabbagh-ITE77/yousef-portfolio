@@ -1,69 +1,70 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion, useScroll, useReducedMotion } from "motion/react";
 import Icon from "./Icon";
 import { navItems, githubProfile, linkedinProfile, resumeUrl } from "../data/site";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [active, setActive] = useState("#home");
+  const { scrollYProgress } = useScroll();
+  const reduced = useReducedMotion();
+
+  useEffect(() => {
+    const update = () => setScrolled(window.scrollY > 24);
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    const visible = new Map<string, number>();
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) visible.set(entry.target.id, entry.boundingClientRect.top);
+        else visible.delete(entry.target.id);
+      });
+      const closest = [...visible.entries()].sort((a,b) => Math.abs(a[1]) - Math.abs(b[1]))[0];
+      if (closest) setActive(`#${closest[0]}`);
+    }, { rootMargin: "-15% 0px -50% 0px", threshold: 0 });
+    document.querySelectorAll("section[id]").forEach((section) => observer.observe(section));
+    const close = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setMenuOpen(false);
+        document.getElementById("menu-toggle")?.focus();
+      }
+    };
+    document.addEventListener("keydown", close);
+    const resize = () => { if (innerWidth >= 1024) setMenuOpen(false); };
+    window.addEventListener("resize", resize);
+    return () => { window.removeEventListener("scroll", update); observer.disconnect(); document.removeEventListener("keydown", close); window.removeEventListener("resize", resize); };
+  }, []);
+
   return (
-<header className="fixed inset-x-0 top-0 z-50 border-b border-white/8 bg-[#07101f]/82 backdrop-blur-xl">
-        <nav className="mx-auto flex h-18 max-w-7xl items-center justify-between px-5 lg:px-8">
-          <a href="#home" className="group flex items-center gap-3" aria-label="Yousef Sabbagh home">
-            <span className="flex h-9 w-9 items-center justify-center rounded-xl border border-blue-400/25 bg-blue-500/10 text-xs font-black text-blue-200 transition group-hover:border-blue-300/50 group-hover:bg-blue-500/20">
-              YS
-            </span>
-            <span className="text-sm font-semibold tracking-tight text-white sm:text-base">Yousef Sabbagh</span>
+    <>
+      <a href="#home" className="skip-link">Skip to content</a>
+      <motion.div className="scroll-progress" style={{ scaleX: scrollYProgress }} aria-hidden="true" />
+      <header className={`site-header ${scrolled || menuOpen ? "is-scrolled" : ""}`}>
+        <nav className="header-inner" aria-label="Main navigation">
+          <a href="#home" className="brand" aria-label="Yousef Sabbagh home" onClick={() => setMenuOpen(false)}>
+            <span className="brand-mark">YS</span><span className="brand-name">Yousef Sabbagh<span className="text-[#6195ff]">.</span></span>
           </a>
-
-          <div className="hidden items-center gap-7 text-sm text-slate-400 lg:flex">
-            {navItems.map((item) => (
-              <a key={item.href} href={item.href} className="transition hover:text-white">
-                {item.label}
-              </a>
-            ))}
+          <div className="hidden items-center gap-6 lg:flex">
+            {navItems.map((item) => <a key={item.href} href={item.href} className="nav-link" aria-current={active === item.href ? "location" : undefined}>{item.label}</a>)}
           </div>
-
-          <div className="hidden items-center gap-3 lg:flex">
-            <a href={githubProfile} target="_blank" rel="noreferrer" className="icon-button" aria-label="GitHub profile">
-              <Icon name="github" />
-            </a>
-            <a href={linkedinProfile} target="_blank" rel="noreferrer" className="icon-button" aria-label="LinkedIn profile">
-              <Icon name="linkedin" />
-            </a>
+          <div className="hidden items-center gap-2 lg:flex">
+            <a href={githubProfile} target="_blank" rel="noreferrer" className="icon-button" aria-label="GitHub profile"><Icon name="github" className="h-3.5 w-3.5" /></a>
+            <a href={linkedinProfile} target="_blank" rel="noreferrer" className="icon-button" aria-label="LinkedIn profile"><Icon name="linkedin" className="h-3.5 w-3.5" /></a>
             <a href={resumeUrl} download className="button-secondary">Download CV</a>
-            <a href="#contact" className="button-primary ml-1">
-              Let&apos;s talk
-              <Icon name="arrow" className="h-4 w-4" />
-            </a>
+            <a href="#contact" className="button-primary">Let&apos;s talk <Icon name="arrow" className="h-3.5 w-3.5" /></a>
           </div>
-
-          <button
-            type="button"
-            className="icon-button lg:hidden"
-            onClick={() => setMenuOpen((open) => !open)}
-            aria-label="Toggle navigation menu"
-            aria-expanded={menuOpen}
-          >
+          <button id="menu-toggle" type="button" className="icon-button lg:hidden" onClick={() => setMenuOpen((open) => !open)} aria-label="Toggle navigation menu" aria-expanded={menuOpen} aria-controls="mobile-navigation">
             <Icon name={menuOpen ? "x" : "menu"} />
           </button>
         </nav>
-
-        {menuOpen && (
-          <div className="border-t border-white/8 bg-[#07101f] px-5 py-5 lg:hidden">
-            <div className="mx-auto grid max-w-7xl gap-1">
-              {navItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setMenuOpen(false)}
-                  className="rounded-xl px-4 py-3 text-sm text-slate-300 transition hover:bg-white/5 hover:text-white"
-                >
-                  {item.label}
-                </a>
-              ))}
-              <a href={resumeUrl} download onClick={() => setMenuOpen(false)} className="button-secondary mt-3 justify-center">Download CV</a>
-            </div>
-          </div>
-        )}
+        <AnimatePresence>
+          {menuOpen && <motion.div id="mobile-navigation" className="mobile-menu lg:hidden" initial={{ opacity: 0, y: reduced ? 0 : -8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} transition={{ duration: .2 }}>
+            {navItems.map((item) => <a key={item.href} href={item.href} className="nav-link" aria-current={active === item.href ? "location" : undefined} onClick={() => setMenuOpen(false)}>{item.label}</a>)}
+            <a href={resumeUrl} download onClick={() => setMenuOpen(false)} className="button-secondary mt-3 justify-center">Download CV</a>
+          </motion.div>}
+        </AnimatePresence>
       </header>
+    </>
   );
 }

@@ -16,13 +16,14 @@ export default function Expertise() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-5 md:grid-cols-2">
+        <div className="expertise-grid mt-12">
           {skillGroups.map((group, index) => {
             const icons: IconName[] = ["code", "server", "database", "layers"];
             return (
               <article key={group.title} className="expertise-card">
-                <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-blue-300/20 bg-blue-500/10 text-blue-200">
-                  <Icon name={icons[index]} />
+                <div className="expertise-icon-row">
+                  <Icon name={icons[index]} className="h-6 w-6" />
+                  <span className="expertise-index">0{index + 1} / EXPERTISE</span>
                 </div>
                 <h3 className="mt-5 text-xl font-bold text-white">{group.title}</h3>
                 <p className="mt-3 max-w-xl text-sm leading-7 text-slate-400">{group.description}</p>

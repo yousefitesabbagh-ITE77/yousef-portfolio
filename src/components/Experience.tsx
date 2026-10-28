@@ -1,4 +1,5 @@
 import { experience } from "../data/experience";
+import CountUp from "./CountUp";
 
 export default function Experience() {
 
@@ -25,8 +26,8 @@ export default function Experience() {
             <div className="mt-7 grid gap-4 sm:grid-cols-3">
               {experience.stats.map(([value, label]) => (
                 <div key={label} className="rounded-2xl border border-white/8 bg-[#0a1426] p-5">
-                  <p className="text-2xl font-black text-white">{value}</p>
-                  <p className="mt-2 text-xs leading-5 text-slate-500">{label}</p>
+                  <p className="stat-value"><CountUp value={value} /></p>
+                  <p className="mt-2 text-xs leading-5 text-slate-500"><CountUp value={label} /></p>
                 </div>
               ))}
             </div>
