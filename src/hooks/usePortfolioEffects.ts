@@ -38,7 +38,7 @@ export default function usePortfolioEffects() {
   }, [reduced]);
 
   useEffect(() => {
-    const selectors = ".section-heading > *, .featured-project, .expertise-card, #experience > .grid > div, .experience-card, #about > .grid > *, .contact-panel, footer";
+    const selectors = ".section-heading > *, .featured-project, .service-card, .process-timeline, .process-step, .expertise-card, #experience > .grid > div, .experience-card, .achievements-heading, .achievement-card, #about > .grid > *, .contact-panel, .contact-heading, .contact-option, .contact-response, footer";
     const targets = document.querySelectorAll<HTMLElement>(selectors);
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {

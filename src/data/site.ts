@@ -5,6 +5,7 @@ export const linkedinProfile = "https://www.linkedin.com/in/yousef-sabbagh-a97ba
 
 export const navItems = [
   { label: "Projects", href: "#projects" },
+  { label: "Services", href: "#services" },
   { label: "Expertise", href: "#expertise" },
   { label: "Experience", href: "#experience" },
   { label: "About", href: "#about" },

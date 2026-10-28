@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { motion, useMotionValue, useReducedMotion, useSpring } from "motion/react";
 import Icon from "./Icon";
 import profileImage from "../assets/profile.webp";
-import { githubProfile, resumeUrl } from "../data/site";
+import { whatsappLink, resumeUrl } from "../data/site";
 
 const headline = "Full-Stack Developer building real-world web products from idea to implementation.";
 
@@ -32,7 +32,7 @@ export default function Hero() {
       <div className="hero-inner">
         <div>
           <motion.p className="hero-kicker" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .7 }}>
-            <span className="availability-dot" /> Open to software engineering roles
+            <span className="availability-dot" /> Available for freelance projects &amp; full-stack roles
           </motion.p>
           <h1 aria-label={headline}>
             {headline.split(" ").map((word, index) => (
@@ -48,10 +48,10 @@ export default function Hero() {
             ))}
           </h1>
           <motion.div initial={{ opacity: 0, y: reduced ? 0 : 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .8, delay: reduced ? 0 : .65 }}>
-            <p className="hero-description">I build complete applications across frontend, backend, and databases using React, TypeScript, PHP, Laravel, REST APIs, and SQL.</p>
+            <p className="hero-description">I build complete web applications — frontend, backend and database — with React, TypeScript, Laravel and SQL. From a rough idea to a working product.</p>
             <div className="hero-actions">
-              <a href="#projects" className="button-primary">Explore my work <Icon name="arrow" className="h-3.5 w-3.5" /></a>
-              <a href={githubProfile} target="_blank" rel="noreferrer" className="button-secondary"><Icon name="github" className="h-3.5 w-3.5" /> GitHub profile</a>
+              <a href={whatsappLink} target="_blank" rel="noreferrer" className="button-primary">Start a project <Icon name="arrow" className="h-3.5 w-3.5" /></a>
+              <a href="#projects" className="button-secondary">View my work <Icon name="arrow" className="h-3.5 w-3.5 rotate-90" /></a>
               <a href={resumeUrl} download className="button-secondary">Download CV</a>
             </div>
             <dl className="hero-capabilities">
@@ -68,7 +68,7 @@ export default function Hero() {
             <div className="portrait-inside">
               <img src={profileImage} alt="Yousef Sabbagh" className="portrait-image" width={480} height={570} loading="eager" fetchPriority="high" />
               <div className="portrait-caption">
-                <div><p>Software Engineer</p><p>Damascus, Syria · Remote-ready</p></div>
+                <div><p>Full-Stack Developer</p><p>Damascus, Syria · Remote-ready</p></div>
                 <Icon name="code" className="h-5 w-5 text-[#86a9e8]" />
               </div>
             </div>

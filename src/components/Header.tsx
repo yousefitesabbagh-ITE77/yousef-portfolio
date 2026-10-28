@@ -31,7 +31,7 @@ export default function Header() {
       }
     };
     document.addEventListener("keydown", close);
-    const resize = () => { if (innerWidth >= 1024) setMenuOpen(false); };
+    const resize = () => { if (innerWidth >= 1280) setMenuOpen(false); };
     window.addEventListener("resize", resize);
     return () => { window.removeEventListener("scroll", update); observer.disconnect(); document.removeEventListener("keydown", close); window.removeEventListener("resize", resize); };
   }, []);
@@ -45,21 +45,21 @@ export default function Header() {
           <a href="#home" className="brand" aria-label="Yousef Sabbagh home" onClick={() => setMenuOpen(false)}>
             <span className="brand-mark">YS</span><span className="brand-name">Yousef Sabbagh<span className="text-[#6195ff]">.</span></span>
           </a>
-          <div className="hidden items-center gap-6 lg:flex">
+          <div className="hidden items-center gap-5 xl:flex">
             {navItems.map((item) => <a key={item.href} href={item.href} className="nav-link" aria-current={active === item.href ? "location" : undefined}>{item.label}</a>)}
           </div>
-          <div className="hidden items-center gap-2 lg:flex">
+          <div className="hidden items-center gap-2 xl:flex">
             <a href={githubProfile} target="_blank" rel="noreferrer" className="icon-button" aria-label="GitHub profile"><Icon name="github" className="h-3.5 w-3.5" /></a>
             <a href={linkedinProfile} target="_blank" rel="noreferrer" className="icon-button" aria-label="LinkedIn profile"><Icon name="linkedin" className="h-3.5 w-3.5" /></a>
             <a href={resumeUrl} download className="button-secondary">Download CV</a>
             <a href="#contact" className="button-primary">Let&apos;s talk <Icon name="arrow" className="h-3.5 w-3.5" /></a>
           </div>
-          <button id="menu-toggle" type="button" className="icon-button lg:hidden" onClick={() => setMenuOpen((open) => !open)} aria-label="Toggle navigation menu" aria-expanded={menuOpen} aria-controls="mobile-navigation">
+          <button id="menu-toggle" type="button" className="icon-button xl:hidden" onClick={() => setMenuOpen((open) => !open)} aria-label="Toggle navigation menu" aria-expanded={menuOpen} aria-controls="mobile-navigation">
             <Icon name={menuOpen ? "x" : "menu"} />
           </button>
         </nav>
         <AnimatePresence>
-          {menuOpen && <motion.div id="mobile-navigation" className="mobile-menu lg:hidden" initial={{ opacity: 0, y: reduced ? 0 : -8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} transition={{ duration: .2 }}>
+          {menuOpen && <motion.div id="mobile-navigation" className="mobile-menu xl:hidden" initial={{ opacity: 0, y: reduced ? 0 : -8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} transition={{ duration: .2 }}>
             {navItems.map((item) => <a key={item.href} href={item.href} className="nav-link" aria-current={active === item.href ? "location" : undefined} onClick={() => setMenuOpen(false)}>{item.label}</a>)}
             <a href={resumeUrl} download onClick={() => setMenuOpen(false)} className="button-secondary mt-3 justify-center">Download CV</a>
           </motion.div>}

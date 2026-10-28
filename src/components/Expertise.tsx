@@ -1,5 +1,4 @@
 import Icon from "./Icon";
-import type { IconName } from "../types";
 import { skillGroups } from "../data/skills";
 
 export default function Expertise() {
@@ -18,11 +17,10 @@ export default function Expertise() {
 
         <div className="expertise-grid mt-12">
           {skillGroups.map((group, index) => {
-            const icons: IconName[] = ["code", "server", "database", "layers"];
             return (
               <article key={group.title} className="expertise-card">
                 <div className="expertise-icon-row">
-                  <Icon name={icons[index]} className="h-6 w-6" />
+                  <Icon name={group.icon} className="h-6 w-6" />
                   <span className="expertise-index">0{index + 1} / EXPERTISE</span>
                 </div>
                 <h3 className="mt-5 text-xl font-bold text-white">{group.title}</h3>

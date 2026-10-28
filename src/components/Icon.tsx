@@ -14,6 +14,12 @@ export default function Icon({ name, className = "h-5 w-5" }: { name: IconName; 
   };
 
   const paths: Record<IconName, ReactNode> = {
+    whatsapp: (
+      <>
+        <path d="M21 11.5a9 9 0 0 1-13.4 7.8L3 21l1.5-4.7A9 9 0 1 1 21 11.5Z" />
+        <path d="m8 7-1 2c.6 3 3 5.4 6 6l2-1-2-2-1 1c-1.5-.6-2.4-1.5-3-3l1-1-2-2Z" />
+      </>
+    ),
     arrow: (
       <>
         <path d="M5 12h14" />

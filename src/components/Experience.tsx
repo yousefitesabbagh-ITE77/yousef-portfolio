@@ -1,5 +1,6 @@
 import { experience } from "../data/experience";
 import CountUp from "./CountUp";
+import Icon from "./Icon";
 
 export default function Experience() {
 
@@ -40,6 +41,24 @@ export default function Experience() {
               ))}
             </ul>
           </article>
+        </div>
+        <div className="achievements">
+          <div className="achievements-heading">
+            <p className="section-label">Milestones</p>
+            <h3 className="achievements-title">Achievements</h3>
+          </div>
+          <div className="achievement-grid">
+            <article className="achievement-card">
+              <Icon name="sparkles" className="h-6 w-6" />
+              <h3>Syria Build Week 2026 — Startup Grind Damascus</h3>
+              <p>One of 30 participants; Buildak selected in the top 12 for the final stage.</p>
+            </article>
+            <article className="achievement-card">
+              <Icon name="code" className="h-6 w-6" />
+              <h3>Devista Practical Technology Internship</h3>
+              <p>Selected as 1 of 5 interns from 130+ applicants; program run fully in English with Devista&apos;s team in Romania.</p>
+            </article>
+          </div>
         </div>
       </section>
   );

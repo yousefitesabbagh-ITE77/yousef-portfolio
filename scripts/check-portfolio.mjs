@@ -35,7 +35,7 @@ try {
     });
     assert.deepEqual(overflow, [], `Content overflow at ${width}px`);
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width);
-    assert.deepEqual(await page.locator("section[id]").evaluateAll((sections) => sections.map((section) => section.id)), ["home", "projects", "expertise", "experience", "about", "contact"]);
+    assert.deepEqual(await page.locator("section[id]").evaluateAll((sections) => sections.map((section) => section.id)), ["home", "projects", "services", "process", "expertise", "experience", "about", "contact"]);
 
     if (await page.getByRole("button", { name: "Toggle navigation menu" }).isVisible()) {
       await page.getByRole("button", { name: "Toggle navigation menu" }).click();
@@ -120,7 +120,7 @@ try {
   assert.equal(await page.locator(".marquee-track").evaluate((element) => getComputedStyle(element).animationName), "none");
   assert.equal(await page.locator(".portrait-border").evaluate((element) => getComputedStyle(element).animationName), "none");
   assert.equal(await page.locator(".word-ghost").count(), 0);
-  await page.getByRole("link", { name: "Explore my work" }).click();
+  await page.getByRole("link", { name: "View my work" }).click();
   assert.ok(await page.locator("#projects").evaluate((element) => element.getBoundingClientRect().top >= 72));
   const reducedScreen = await activeScreen();
   await page.waitForTimeout(4300);

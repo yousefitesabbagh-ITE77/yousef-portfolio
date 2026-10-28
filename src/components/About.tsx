@@ -14,8 +14,9 @@ export default function About() {
               I&apos;m Yousef Sabbagh, a Full-Stack Developer and Information Technology Engineering student. My work covers responsive frontend interfaces, backend systems, REST APIs, authentication, authorization, and relational databases.
             </p>
             <p className="mt-5 leading-8 text-slate-400">
-              I enjoy understanding how a product should work, shaping its data and business rules, and then building the complete experience—from the first screen to the database behind it. I&apos;m currently pursuing Software Engineer and Full-Stack Developer opportunities where I can contribute to real production systems.
+              I enjoy understanding how a product should work, shaping its data and business rules, and then building the complete experience—from the first screen to the database behind it. I&apos;m available for freelance projects and full-stack roles where I can contribute to real production systems.
             </p>
+            <p className="mt-5 text-sm leading-8 text-slate-400">Languages: Arabic (native), English (C1).</p>
             <div className="mt-8 rounded-2xl border border-white/8 bg-[#0a1426] p-5">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Education</p>
               <p className="mt-3 font-semibold text-white">B.Sc. in Information Technology Engineering</p>

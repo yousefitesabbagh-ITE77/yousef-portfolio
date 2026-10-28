@@ -2,6 +2,8 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import TechMarquee from "./components/TechMarquee";
 import Projects from "./components/Projects";
+import Services from "./components/Services";
+import Process from "./components/Process";
 import Expertise from "./components/Expertise";
 import Experience from "./components/Experience";
 import About from "./components/About";
@@ -18,6 +20,8 @@ function App() {
       <Hero />
       <TechMarquee />
       <Projects />
+      <Services />
+      <Process />
       <Expertise />
       <Experience />
       <About />

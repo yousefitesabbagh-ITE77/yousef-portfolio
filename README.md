@@ -4,10 +4,11 @@ A responsive engineering portfolio presenting full-stack projects across fronten
 
 ## Project order
 
-1. **TeamFlow** — Full-stack project and task management platform built with React, Laravel, MariaDB, and Laravel Sanctum.
+1. **Buildak** — B2B ordering platform for construction contractors, with competing supplier offers, cash/installment options, and platform-handled delivery.
 2. **Mawad** — B2B construction procurement platform with contractor/supplier workflows and AI-powered product features.
-3. **Teacher Organizer** — Offline-first teacher management PWA built with React, TypeScript, IndexedDB, and Dexie.
-4. **Sportivo** — Multi-page sports e-commerce experience built with HTML, CSS, and JavaScript.
+3. **TeamFlow** — Full-stack project and task management platform built with React, Laravel, MariaDB, and Laravel Sanctum.
+4. **Teacher Organizer** — Offline-first teacher management PWA built with React, TypeScript, IndexedDB, and Dexie.
+5. **Sportivo** — Multi-page sports e-commerce experience built with HTML, CSS, and JavaScript.
 
 ## Portfolio stack
 

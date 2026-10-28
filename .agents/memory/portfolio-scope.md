@@ -14,3 +14,9 @@ For the redesign, the user explicitly requested preserving existing content and 
 **Why:** The user wants a distinctive portfolio without changing its content or adding heavy dependencies.
 
 **How to apply:** Keep future refinements consistent with this scope unless the user changes it. All movement must respect reduced-motion preferences.
+
+Content positioning must serve both freelance clients and full-stack hiring, using the established visual system.
+
+**Why:** The user explicitly requested this dual audience for the final content pass.
+
+**How to apply:** Keep calls to action useful for both project inquiries and employment opportunities.

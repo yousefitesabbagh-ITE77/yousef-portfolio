@@ -19,6 +19,7 @@ export type Project = {
 };
 
 export type SkillGroup = {
+  icon: IconName;
   title: string;
   description: string;
   skills: string[];
@@ -36,6 +37,7 @@ export type IconName =
   | "menu"
   | "server"
   | "sparkles"
+  | "whatsapp"
   | "x";
 
 
