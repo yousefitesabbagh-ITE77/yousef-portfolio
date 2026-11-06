@@ -152,13 +152,14 @@ export const featuredProjects: Project[] = [
   },
   {
     title: "Teacher Organizer",
-    eyebrow: "Offline-First Teacher Management PWA",
+    eyebrow: "Offline-First PWA Built for a Working Teacher",
     summary:
-      "An installable application for managing students, sessions, tasks, notes, and schedules while keeping the core workflow available without an internet connection.",
+      "An installable app built for a working teacher to manage students, sessions, tasks and schedules, shaped by the teacher's real constraints: an iPhone, no Mac, and a fear of losing data.",
     points: [
-      "Implemented offline-first local data persistence with IndexedDB and Dexie.",
-      "Added JSON backup and restore so users can move and recover their data.",
-      "Designed an upcoming-session dashboard and practical daily management workflows.",
+      "Started from one real user: a working teacher who needed to run students, sessions and schedules from an iPhone.",
+      "With no Mac for a native iOS build, chose an installable PWA that works offline, so it runs on the teacher's phone without the App Store.",
+      "Data loss was the teacher's main worry, so JSON backup and restore became a core feature, not an extra.",
+      "Built offline-first storage with IndexedDB and Dexie, plus an upcoming-session dashboard for daily use.",
     ],
     tech: ["React", "TypeScript", "IndexedDB", "Dexie", "PWA"],
     github: "https://github.com/yousefitesabbagh-ITE77/teacher-organizer",

@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -47,20 +49,48 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Yousef Sabbagh",
-        "jobTitle": "Product-Minded Builder",
-        "url": "https://yousefsabbagh.me",
-        "email": "yousef.ite.sabbagh@gmail.com",
-        "sameAs": [
-          "https://github.com/yousefitesabbagh-ITE77",
-          "https://www.linkedin.com/in/yousef-sabbagh-a97ba1363"
-        ],
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Damascus",
-          "addressCountry": "Syria"
-        }
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://yousefsabbagh.me/#website",
+            "name": "Yousef Sabbagh",
+            "alternateName": "yousefsabbagh.me",
+            "url": "https://yousefsabbagh.me/"
+          },
+          {
+            "@type": "Person",
+            "@id": "https://yousefsabbagh.me/#person",
+            "name": "Yousef Sabbagh",
+            "jobTitle": "Product-Minded Builder",
+            "description": "Product-minded builder and IT Engineering student. Founder of Ustazna and builder of Buildak, a Syria Build Week 2026 finalist.",
+            "url": "https://yousefsabbagh.me/",
+            "image": "https://yousefsabbagh.me/og-image.png",
+            "email": "yousef.ite.sabbagh@gmail.com",
+            "alumniOf": {
+              "@type": "CollegeOrUniversity",
+              "name": "University of Damascus"
+            },
+            "knowsAbout": [
+              "Product management",
+              "Customer discovery",
+              "MVP scoping",
+              "Requirements",
+              "User flows",
+              "React",
+              "TypeScript",
+              "Laravel"
+            ],
+            "sameAs": [
+              "https://github.com/yousefitesabbagh-ITE77",
+              "https://www.linkedin.com/in/yousef-sabbagh-a97ba1363"
+            ],
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Damascus",
+              "addressCountry": "Syria"
+            }
+          }
+        ]
       }
     </script>
   </head>

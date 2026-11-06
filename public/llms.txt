@@ -1,0 +1,34 @@
+# Yousef Sabbagh
+
+> Yousef Sabbagh is a product-minded builder and third-year Information Technology Engineering student at the University of Damascus, Syria (2024 – expected 2029). He runs customer discovery, scopes MVPs and writes requirements, then builds them himself in React and TypeScript. He founded Ustazna, a live tutoring marketplace, and built Buildak, which reached the final stage of Syria Build Week 2026.
+
+- Website: https://yousefsabbagh.me/
+- CV (PDF): https://yousefsabbagh.me/Yousef_Sabbagh_CV.pdf
+- LinkedIn: https://www.linkedin.com/in/yousef-sabbagh-a97ba1363
+- GitHub: https://github.com/yousefitesabbagh-ITE77
+- Email: yousef.ite.sabbagh@gmail.com
+- Location: Damascus, Syria (open to remote work)
+- Languages: Arabic (native), English (C1)
+- Looking for: product internships and product roles
+
+## Projects
+
+- [Ustazna](https://stdhn-aar-d-tfaaly.replit.app/): marketplace where parents request a vetted university student to teach their child a specialty (programming, design, photography, drawing, architecture or medicine) or to tutor school subjects, at home or online. Built solo: he spoke with 5–6 parents first, built the first demo in a 5-hour hackathon (Startup Syria Hackathon, Damascus University, November 2026), narrowed the MVP to one problem after the judges' feedback, and turned the demo into a live service with a parent request form, tutor application and an admin panel for vetting and matching. Interface in Arabic.
+- [Buildak](https://buildak.replit.app/): B2B ordering platform for construction contractors in Syria. Contractors list materials and quantities, suppliers send competing offers, and contractors compare them and buy in cash or installments, with delivery handled by the platform. Customer discovery showed contractors usually buy on credit from traders they know, which led to the installment option. Selected in the top 12 of 30 participants at Syria Build Week 2026 (Startup Grind Damascus). Solo project, product and full-stack (React, TypeScript, PostgreSQL). Supplier dashboard: https://buildak-supplier.replit.app/
+- [Mawad](https://mawad-build-smart.lovable.app/): first version of the construction procurement idea, built during the Devista Levant internship: contractor and supplier flows, material requests and quotation comparison. Presented at Demo Day.
+- [TeamFlow](https://github.com/yousefitesabbagh-ITE77/teamflow): project and task management app with a React frontend and Laravel REST APIs, Sanctum authentication and owner/member authorization, verified with 87 PHPUnit tests (435 assertions).
+- [Teacher Organizer](https://teacher-organizer.netlify.app/): offline-first PWA built for a working teacher who manages students, sessions and schedules from an iPhone. With no Mac for a native iOS build, he chose an installable PWA; data loss was the main worry, so backup and restore is a core feature.
+
+## Experience
+
+- Technology Intern, Devista Levant, Practical Technology Internship Program (June – July 2026): selected as 1 of 5 interns from 130+ applicants for a four-week program on product thinking and business analysis, run in English with Devista's team in Romania. Researched the construction procurement problem, defined the MVP scope and requirements for Mawad, and presented it at Demo Day.
+- Coding Coach, Awalem, Damascus (May – September 2026): taught two course levels of coding, electronics and robotics to children with Scratch, CodiPlay and Arduino.
+
+## Training
+
+- Marketing 360°, Syrian Association for AI & Entrepreneurship, 100 hours (August – November 2026).
+
+## Skills
+
+- Product: customer discovery and interviews, competitor research, MVP scoping, requirements and specs, user flows, business models.
+- Engineering: React, TypeScript, Tailwind CSS, PWA, PHP, Laravel, REST APIs, SQL, PostgreSQL, MariaDB.
