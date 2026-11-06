@@ -7,14 +7,14 @@ export default function About() {
         <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:items-start">
           <div>
             <p className="section-label">About me</p>
-            <h2 className="section-title">I turn requirements into structured, maintainable software.</h2>
+            <h2 className="section-title">I start with the user&apos;s problem, then build the product.</h2>
           </div>
           <div>
             <p className="text-lg leading-9 text-slate-300">
-              I&apos;m Yousef Sabbagh, a Full-Stack Developer and Information Technology Engineering student. My work covers responsive frontend interfaces, backend systems, REST APIs, authentication, authorization, and relational databases.
+              I&apos;m Yousef Sabbagh, an Information Technology Engineering student who works where product and engineering meet. I talk to the people who will use a product, decide what the first version must do, and write it down clearly enough to build.
             </p>
             <p className="mt-5 leading-8 text-slate-400">
-              I enjoy understanding how a product should work, shaping its data and business rules, and then building the complete experience—from the first screen to the database behind it. I&apos;m available for freelance projects and full-stack roles where I can contribute to real production systems.
+              Because I can build it myself (React, TypeScript, Laravel and SQL), my requirements stay realistic and I can ship a working MVP to test with real users. I&apos;m looking for product internships and roles, and I still take on selected freelance MVP projects.
             </p>
             <p className="mt-5 text-sm leading-8 text-slate-400">Languages: Arabic (native), English (C1).</p>
             <div className="mt-8 rounded-2xl border border-white/8 bg-[#0a1426] p-5">

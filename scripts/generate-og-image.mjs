@@ -12,7 +12,7 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" v
     <path d="M20 20 L20 31" stroke="#6195ff" stroke-width="3.6" stroke-linecap="round"/>
   </g>
   <text x="112" y="265" fill="#ffffff" font-family="DejaVu Sans, sans-serif" font-size="72" font-weight="bold">Yousef Sabbagh</text>
-  <text x="112" y="345" fill="#cbd5e1" font-family="DejaVu Sans, sans-serif" font-size="36">Full-Stack Developer · React · Laravel</text>
+  <text x="112" y="345" fill="#cbd5e1" font-family="DejaVu Sans, sans-serif" font-size="36">Product-minded builder · Discovery · MVPs</text>
   <text x="112" y="490" fill="#7dd3fc" font-family="DejaVu Sans, sans-serif" font-size="30">yousefsabbagh.me</text>
 </svg>`;
 

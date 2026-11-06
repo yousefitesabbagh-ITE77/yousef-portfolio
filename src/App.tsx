@@ -20,11 +20,11 @@ function App() {
       <Hero />
       <TechMarquee />
       <Projects />
-      <Services />
       <Process />
       <Expertise />
       <Experience />
       <About />
+      <Services />
       <Contact />
       <Footer />
       <WhatsAppButton />

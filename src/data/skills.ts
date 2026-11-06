@@ -2,6 +2,20 @@ import type { SkillGroup } from "../types";
 
 export const skillGroups: SkillGroup[] = [
   {
+    title: "Product",
+    icon: "sparkles",
+    description: "Understanding the problem, defining the first useful version, and mapping the experience before building.",
+    skills: [
+      "Customer discovery",
+      "Customer interviews",
+      "MVP scoping",
+      "Requirements & specs",
+      "User flows",
+      "Competitor research",
+      "Business models",
+    ],
+  },
+  {
     title: "Frontend Engineering",
     icon: "code",
     description:
@@ -65,12 +79,6 @@ export const skillGroups: SkillGroup[] = [
       "PowerShell",
       "VS Code",
     ],
-  },
-  {
-    title: "Product",
-    icon: "sparkles",
-    description: "Understanding the problem, defining the first useful version, and mapping the experience before building.",
-    skills: ["Customer discovery", "MVP scoping", "User flows", "Market research"],
   },
 ];
 

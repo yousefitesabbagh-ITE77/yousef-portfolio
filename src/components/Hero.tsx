@@ -4,7 +4,7 @@ import Icon from "./Icon";
 import profileImage from "../assets/profile.webp";
 import { whatsappLink, resumeUrl } from "../data/site";
 
-const headline = "Full-Stack Developer building real-world web products from idea to implementation.";
+const headline = "Product-minded builder who finds the real problem and ships the first version.";
 
 export default function Hero() {
   const reduced = useReducedMotion();
@@ -32,7 +32,7 @@ export default function Hero() {
       <div className="hero-inner">
         <div>
           <motion.p className="hero-kicker" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .7 }}>
-            <span className="availability-dot" /> Available for freelance projects &amp; full-stack roles
+            <span className="availability-dot" /> Open to product internships and roles
           </motion.p>
           <h1 aria-label={headline}>
             {headline.split(" ").map((word, index) => (
@@ -48,27 +48,27 @@ export default function Hero() {
             ))}
           </h1>
           <motion.div initial={{ opacity: 0, y: reduced ? 0 : 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .8, delay: reduced ? 0 : .65 }}>
-            <p className="hero-description">I build complete web applications — frontend, backend and database — with React, TypeScript, Laravel and SQL. From a rough idea to a working product.</p>
+            <p className="hero-description">I talk to users, define the MVP and write the requirements, then build it myself in React and TypeScript. From customer conversations to a live product.</p>
             <div className="hero-actions">
-              <a href={whatsappLink} target="_blank" rel="noreferrer" className="button-primary">Start a project <Icon name="arrow" className="h-3.5 w-3.5" /></a>
-              <a href="#projects" className="button-secondary">View my work <Icon name="arrow" className="h-3.5 w-3.5 rotate-90" /></a>
+              <a href="#projects" className="button-primary">View my work <Icon name="arrow" className="h-3.5 w-3.5 rotate-90" /></a>
               <a href={resumeUrl} download className="button-secondary">Download CV</a>
+              <a href={whatsappLink} target="_blank" rel="noreferrer" className="button-secondary">Let&apos;s talk <Icon name="arrow" className="h-3.5 w-3.5" /></a>
             </div>
             <dl className="hero-capabilities">
-              {[["Frontend", "React · TypeScript"], ["Backend", "PHP · Laravel"], ["Data", "SQL · MariaDB"], ["Delivery", "Idea to product"]].map(([label, value]) => (
+              {[["Discovery", "Customer interviews"], ["Scope", "MVP & requirements"], ["Build", "React · TypeScript"], ["Ship", "Live products"]].map(([label, value]) => (
                 <div key={label}><dt>{label}</dt><dd>{value}</dd></div>
               ))}
             </dl>
           </motion.div>
         </div>
         <motion.div className="portrait-wrap" initial={{ opacity: 0, y: reduced ? 0 : 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .9, delay: reduced ? 0 : .3 }}>
-          <div className="portrait-label"><span>YOUSEF SABBAGH</span><span>ENGINEER / BUILDER</span></div>
+          <div className="portrait-label"><span>YOUSEF SABBAGH</span><span>PRODUCT / BUILDER</span></div>
           <div className="portrait-frame">
             <div className="portrait-border" aria-hidden="true" />
             <div className="portrait-inside">
               <img src={profileImage} alt="Yousef Sabbagh" className="portrait-image" width={480} height={570} loading="eager" fetchPriority="high" />
               <div className="portrait-caption">
-                <div><p>Full-Stack Developer</p><p>Damascus, Syria · Remote-ready</p></div>
+                <div><p>Product-minded builder</p><p>Damascus, Syria · Remote-ready</p></div>
                 <Icon name="code" className="h-5 w-5 text-[#86a9e8]" />
               </div>
             </div>
@@ -76,7 +76,7 @@ export default function Hero() {
           <span className="portrait-corner" aria-hidden="true" />
         </motion.div>
       </div>
-      <div className="hero-bottom"><span>Frontend to database. One connected product.</span><a href="#projects">Selected work <Icon name="arrow" className="h-3 w-3 rotate-90" /></a></div>
+      <div className="hero-bottom"><span>From the user&apos;s problem to a live product.</span><a href="#projects">Selected work <Icon name="arrow" className="h-3 w-3 rotate-90" /></a></div>
     </section>
   );
 }

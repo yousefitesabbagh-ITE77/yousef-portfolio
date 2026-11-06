@@ -3,7 +3,7 @@ import { emailComposeLink, linkedinProfile, whatsappLink } from "../data/site";
 import type { IconName } from "../types";
 
 const options: { label: string; detail: string; href: string; icon: IconName; primary?: boolean }[] = [
-  { label: "WhatsApp", detail: "Start a project conversation", href: whatsappLink, icon: "whatsapp", primary: true },
+  { label: "WhatsApp", detail: "Start a conversation", href: whatsappLink, icon: "whatsapp", primary: true },
   { label: "Email", detail: "Send a brief or an opportunity", href: emailComposeLink, icon: "mail" },
   { label: "LinkedIn", detail: "Connect and talk about a role", href: linkedinProfile, icon: "linkedin" },
 ];
@@ -18,7 +18,7 @@ export default function Contact() {
           <div className="contact-heading">
             <p className="section-label">Contact</p>
             <h2 className="mt-4 max-w-3xl">Have a project or a role in mind? Let&apos;s talk.</h2>
-            <p className="mt-5 max-w-2xl text-lg">A product to build, a workflow to improve, or a full-stack role to discuss. Tell me what you have in mind.</p>
+            <p className="mt-5 max-w-2xl text-lg">A product role, an internship, or an MVP to scope and build. Tell me what you have in mind.</p>
           </div>
           <div className="contact-options">
             {options.map((option) => (

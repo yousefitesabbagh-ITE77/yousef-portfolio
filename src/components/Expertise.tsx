@@ -7,11 +7,11 @@ export default function Expertise() {
 <section id="expertise" className="section-shell border-t border-white/8 bg-white/[0.012]">
         <div className="section-heading">
           <div>
-            <p className="section-label">Technical expertise</p>
-            <h2 className="section-title">Strong across the complete application stack.</h2>
+            <p className="section-label">Skills</p>
+            <h2 className="section-title">Product sense, backed by real engineering.</h2>
           </div>
           <p className="section-description">
-            I work across browser interfaces, server-side application logic, API contracts, authentication, authorization, and data persistence—not as isolated layers, but as one connected product.
+            I start from the user and the business problem, then carry the solution through interface, logic and data, so what I specify is something I know can be built.
           </p>
         </div>
 

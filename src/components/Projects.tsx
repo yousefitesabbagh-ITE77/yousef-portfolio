@@ -17,11 +17,11 @@ export default function Projects() {
 <section id="projects" className="section-shell border-t border-white/8">
         <div className="section-heading">
           <div>
-            <p className="section-label">Selected engineering work</p>
+            <p className="section-label">Selected work</p>
             <h2 className="section-title">Products built around real workflows.</h2>
           </div>
           <p className="section-description">
-            Each project demonstrates a different part of full-stack engineering: server-side business logic, API design, relational data, frontend architecture, offline storage, or complete product flows.
+            Each project starts from a real user problem: what I learned from customers, what I chose to build first, and how I shipped it.
           </p>
         </div>
 
