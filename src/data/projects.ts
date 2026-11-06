@@ -20,11 +20,46 @@ import buildakRequestReview from "../assets/projects/buildak/request-review.webp
 import buildakOfferProgress from "../assets/projects/buildak/offer-progress.webp";
 import buildakOfferComparison from "../assets/projects/buildak/offer-comparison.webp";
 import buildakSupplierDashboard from "../assets/projects/buildak/supplier-dashboard.webp";
+import ustaznaLanding from "../assets/projects/ustazna/landing.webp";
+import ustaznaTracks from "../assets/projects/ustazna/tracks.webp";
+import ustaznaTrackCode from "../assets/projects/ustazna/track-code.webp";
+import ustaznaHow from "../assets/projects/ustazna/how.webp";
+import ustaznaRequest from "../assets/projects/ustazna/request.webp";
+import ustaznaTeach from "../assets/projects/ustazna/teach.webp";
 
 
 import type { Project } from "../types";
 
 export const featuredProjects: Project[] = [
+  {
+    title: "Ustazna",
+    eyebrow: "Tutoring Marketplace · Parents and University Students",
+    badges: [
+      { label: "Live product", highlighted: true },
+      { label: "Built at Startup Syria Hackathon" },
+    ],
+    summary:
+      "A marketplace where parents request a vetted university student to teach their child a specialty (programming, design, photography, drawing, architecture or medicine) or to tutor school subjects, at home or online.",
+    points: [
+      "Spoke with 5–6 parents before building, then built the first demo solo in a 5-hour hackathon and pitched it to judges in 3 minutes.",
+      "Judges' feedback showed the pitch mixed three problems; narrowed the MVP to one (children discovering a university specialty early) and kept school tutoring as a secondary line.",
+      "Turned the demo into a live service in three days: parent request form, tutor application, and an admin panel for vetting, matching and export, on a fixed $18 build budget.",
+      "Designed trust into the flow: in-person vetting before acceptance, an adult at home for the first lesson, and payment only after the first lesson.",
+    ],
+    tech: ["Node.js", "Express", "PostgreSQL", "JavaScript"],
+    links: [{ label: "Live site", href: "https://stdhn-aar-d-tfaaly.replit.app/" }],
+    browserUrl: "stdhn-aar-d-tfaaly.replit.app",
+    image: ustaznaLanding,
+    gallery: [
+      ustaznaLanding,
+      ustaznaTracks,
+      ustaznaTrackCode,
+      ustaznaHow,
+      ustaznaRequest,
+      ustaznaTeach,
+    ],
+    note: "Interface in Arabic — built for families in Damascus.",
+  },
   {
     title: "Buildak",
     eyebrow: "B2B Ordering Platform for Construction Contractors",

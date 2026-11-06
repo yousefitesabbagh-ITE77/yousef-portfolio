@@ -25,11 +25,11 @@ export default function Projects() {
           </p>
         </div>
 
-        <p className="project-journey-intro">From an internship MVP to a startup-competition finalist.</p>
         <div className="project-list">
           {featuredProjects.map((project, index) => (
             <Fragment key={project.title}>
-              {index === 1 && <div className="project-evolution"><span className="project-evolution-line" aria-hidden="true" /><span>Evolved after customer discovery</span></div>}
+              {project.title === "Buildak" && <p className="project-journey-intro">From an internship MVP to a startup-competition finalist.</p>}
+              {project.title === "Mawad" && <div className="project-evolution"><span className="project-evolution-line" aria-hidden="true" /><span>Evolved after customer discovery</span></div>}
               <ProjectCard project={project} index={index} onOpenGallery={openGallery} />
             </Fragment>
           ))}

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useScroll, useReducedMotion } from "motion/react";
 import Icon from "./Icon";
+import LogoMark from "./LogoMark";
 import { navItems, githubProfile, linkedinProfile, resumeUrl } from "../data/site";
 
 export default function Header() {
@@ -43,7 +44,7 @@ export default function Header() {
       <header className={`site-header ${scrolled || menuOpen ? "is-scrolled" : ""}`}>
         <nav className="header-inner" aria-label="Main navigation">
           <a href="#home" className="brand" aria-label="Yousef Sabbagh home" onClick={() => setMenuOpen(false)}>
-            <span className="brand-mark">YS</span><span className="brand-name">Yousef Sabbagh<span className="text-[#6195ff]">.</span></span>
+            <span className="brand-mark"><LogoMark className="h-[27px] w-[27px]" /></span><span className="brand-name">Yousef Sabbagh<span className="text-[#6195ff]">.</span></span>
           </a>
           <div className="hidden items-center gap-5 xl:flex">
             {navItems.map((item) => <a key={item.href} href={item.href} className="nav-link" aria-current={active === item.href ? "location" : undefined}>{item.label}</a>)}
