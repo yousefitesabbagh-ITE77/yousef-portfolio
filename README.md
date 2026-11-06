@@ -1,14 +1,21 @@
-# Yousef Sabbagh — Full-Stack Developer Portfolio
+# Yousef Sabbagh — Product-Minded Builder Portfolio
 
-A responsive engineering portfolio presenting full-stack projects across frontend, backend, APIs, authentication, authorization, relational databases, offline-first storage, and end-to-end product workflows.
+A product-first portfolio: each project starts from a real user problem, then shows what was scoped first and how it was built and shipped.
 
 ## Project order
 
-1. **Buildak** — B2B ordering platform for construction contractors, with competing supplier offers, cash/installment options, and platform-handled delivery.
-2. **Mawad** — B2B construction procurement platform with contractor/supplier workflows and AI-powered product features.
-3. **TeamFlow** — Full-stack project and task management platform built with React, Laravel, MariaDB, and Laravel Sanctum.
-4. **Teacher Organizer** — Offline-first teacher management PWA built with React, TypeScript, IndexedDB, and Dexie.
-5. **Sportivo** — Multi-page sports e-commerce experience built with HTML, CSS, and JavaScript.
+1. **Ustazna** — Tutoring marketplace matching parents with vetted university students; live service built from a hackathon demo.
+2. **Buildak** — B2B ordering platform for construction contractors, with competing supplier offers, cash/installment options, and platform-handled delivery.
+3. **Mawad** — B2B construction procurement platform with contractor/supplier workflows and AI-powered product features.
+4. **TeamFlow** — Full-stack project and task management platform built with React, Laravel, MariaDB, and Laravel Sanctum.
+5. **Teacher Organizer** — Offline-first teacher management PWA built with React, TypeScript, IndexedDB, and Dexie.
+
+## Icons and share image
+
+```bash
+node scripts/generate-icons.mjs
+node scripts/generate-og-image.mjs
+```
 
 ## Portfolio stack
 

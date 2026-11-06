@@ -1,4 +1,3 @@
-import sportivoImage from "../assets/projects/sportivo.webp";
 import teacherOrganizerImage from "../assets/projects/teacher-organizer.webp";
 import teamflowLogin from "../assets/projects/teamflow/01-login.webp";
 import teamflowDashboard from "../assets/projects/teamflow/02-dashboard.webp";
@@ -166,22 +165,6 @@ export const featuredProjects: Project[] = [
     liveDemo: "https://teacher-organizer.netlify.app/",
     videoDemo: "https://www.youtube.com/watch?v=PFxrEzov8Sc",
     image: teacherOrganizerImage,
-  },
-  {
-    title: "Sportivo",
-    eyebrow: "Sports E-Commerce Experience",
-    summary:
-      "A responsive sports storefront that covers the customer journey from product discovery and filtering to cart, checkout, order history, and delivery tracking.",
-    points: [
-      "Built search, filtering, sorting, active filter chips, wishlist, and recently viewed products.",
-      "Developed product details, cart, validated checkout, confirmation, order history, and tracking pages.",
-      "Persisted shopping and account state in browser storage across the multi-page experience.",
-    ],
-    tech: ["HTML5", "CSS3", "JavaScript", "ES Modules", "Local Storage"],
-    github:
-      "https://github.com/yousefitesabbagh-ITE77/Sportivo-e-commerce-website-for-sports",
-    liveDemo: "https://sportivo-ecommerce.netlify.app/",
-    image: sportivoImage,
   },
 ];
 
